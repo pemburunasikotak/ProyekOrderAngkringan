@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#406193</color>
+    <color name="colorPrimaryDark">#0F6CF9</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="warnaHitam">#000000</color>
+    <color name="warnaPutih">#ffffff</color>
+    <color name="warnaMakanan">#BFD5F6</color>
+
+</resources>

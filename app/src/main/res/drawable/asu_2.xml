@@ -1,0 +1,26 @@
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+    <corners
+        android:bottomLeftRadius="40dp"
+        android:bottomRightRadius="40dp"
+        android:radius="40dp"
+
+        android:topLeftRadius="40dp"
+        android:topRightRadius="40dp"/>
+    <size
+        android:viewportWidth="377"
+        android:viewportHeight="375"
+        android:height="377dp"
+        android:width="375dp"/>
+    <solid
+
+        android:color="@color/colorPrimary"/>
+
+    <clip-path
+        android:pathData="M185 0H192C294.173 0 377 82.8273 377 185V190C377 292.173 294.173 375 192 375H185C82.8273 375 0 292.173 0 190V185C0 82.8273 82.8273 0 185 0Z"
+        />
+
+</shape>

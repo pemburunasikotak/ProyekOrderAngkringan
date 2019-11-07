@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <View
+        android:id="@+id/success_1"
+        android:layout_width="211dp"
+        android:layout_height="212dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="153dp"
+        android:background="@drawable/success1"
+        />
+
+    <TextView
+        android:id="@+id/pesanan"
+        android:layout_width="189dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="111dp"
+        android:textStyle="bold"
+        android:layout_marginTop="41dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/pesanan"
+        android:textAppearance="@style/pesanan" />
+
+    <TextView
+        android:id="@+id/berhasil"
+        android:layout_width="189dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="111dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/berhasil"
+        android:textAppearance="@style/berhasil" />
+
+</LinearLayout>

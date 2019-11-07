@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="pesanan">
+        <item name="android:textSize">
+            40sp
+        </item>
+        <item name="android:textColor">
+            #F2D638
+        </item>
+        <item name="android:fontFamily">
+            Ruluko
+        </item>
+    </style>
+    <style name="berhasil">
+        <item name="android:textSize">
+            36sp
+        </item>
+        <item name="android:fontFamily">
+            Rubik One
+        </item>
+        <item name="android:textColor">
+            #F2D638
+        </item>
+
+    </style>
+
+</resources>
