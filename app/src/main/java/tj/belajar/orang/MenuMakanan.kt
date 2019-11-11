@@ -25,12 +25,6 @@ class MenuMakanan: AppCompatActivity() {
         list.addAll(dataMakanan.listData)
         showRecyleView()
 
-
-
-
-        //tambah data
-
-
     }
 
     private fun showRecyleView() {
@@ -38,7 +32,6 @@ class MenuMakanan: AppCompatActivity() {
         val listMakanan = AdapterMakanan(list)
         recyclerView.adapter = listMakanan
     }
-
 
     /** Called when the user taps the Send button  */
     fun sendMessage(view: View) {
