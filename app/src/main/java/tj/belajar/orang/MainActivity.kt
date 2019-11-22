@@ -4,12 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.LinearLayout
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import tj.belajar.orang.makan.MenuMakanan
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var btnmakan : Button
+    lateinit var btnminum : Button
 
     lateinit var btnlogin : Button
 
@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Fungsi Tombol Intent
+
         btnlogin= findViewById(R.id.btnLogin)
         btnlogin.setOnClickListener{
             val masuk:Intent = Intent(this, MenuMakanan::class.java)

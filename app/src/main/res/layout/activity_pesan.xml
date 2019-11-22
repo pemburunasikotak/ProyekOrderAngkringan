@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/pesanan"
+            android:layout_width="70dp"
+            android:layout_height="21dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="79dp"
+            android:text="@string/pesanan"
+            android:textSize="15dp"
+            android:textAppearance="@style/pesan"
+            android:gravity="center_horizontal|top"
+            />
+
+        <TextView
+            android:id="@+id/tambah"
+            android:layout_width="70dp"
+            android:layout_height="21dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="210dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="79dp"
+            android:text="@string/tambah"
+            android:textSize="15dp"
+            android:textAppearance="@style/pesan"
+            android:gravity="center_horizontal|top"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="624dp"
+            tools:listitem="@layout/recyle_pesan" />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuMakanan">
+    tools:context=".makan.MenuMakanan">
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
@@ -24,12 +24,17 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="620dp"
         android:orientation="vertical">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_menu"
             android:layout_width="match_parent"
             android:layout_height="613dp"
-            tools:listitem="@layout/fragment_menuminum" />
+            tools:listitem="@layout/fragmant_menumakan" />
     </LinearLayout>
+    <Button
+        android:id="@+id/pesan"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Pesan" />
 </LinearLayout>

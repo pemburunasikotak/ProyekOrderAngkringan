@@ -1,4 +1,6 @@
-package tj.belajar.orang
+package tj.belajar.orang.makan
+
+import tj.belajar.orang.R
 
 object dataMakanan {
     private val namaMakanan = arrayOf("Sego Pecel",
@@ -6,11 +8,13 @@ object dataMakanan {
 
     private val hargaMakanan = arrayOf("3000","4000","4000","4000","4000")
 
-    private val imageMakanan = intArrayOf(R.drawable.pesan,
+    private val imageMakanan = intArrayOf(
+        R.drawable.pesan,
         R.drawable.logo,
         R.drawable.pesan,
         R.drawable.logo,
-        R.drawable.logo)
+        R.drawable.logo
+    )
 
 
     val listData: ArrayList<Makanan>

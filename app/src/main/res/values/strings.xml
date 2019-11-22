@@ -3,4 +3,7 @@
     <string name="masuk">Masuk</string>
     <string name="pesanan">PESANAN</string>
     <string name="berhasil">BERHASIL</string>
+    <string name="tambah">+ Tambah</string>
+    <string name="data">Judul</string>
+
 </resources>

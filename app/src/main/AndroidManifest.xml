@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuMakanan"></activity>
+        <activity android:name=".makan.MenuMakanan"></activity>
+        <activity android:name=".minum.MenuMinuman"></activity>
     </application>
 
 </manifest>

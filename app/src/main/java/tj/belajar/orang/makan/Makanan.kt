@@ -1,4 +1,4 @@
-package tj.belajar.orang
+package tj.belajar.orang.makan
 
 data class Makanan(
     var nama : String ="",

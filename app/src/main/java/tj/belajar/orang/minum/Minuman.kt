@@ -1,4 +1,4 @@
-package tj.belajar.orang
+package tj.belajar.orang.minum
 
 class Minuman (
     var namaMinum : String="",

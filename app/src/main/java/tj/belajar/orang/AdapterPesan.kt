@@ -9,18 +9,20 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import tj.belajar.orang.makan.Makanan
 
-class AdapterMakanan(private val makanadapter: ArrayList<Makanan>):RecyclerView.Adapter<AdapterMakanan.MyViewHolder>(){
+class AdapterPesan (private val makanadapter: ArrayList<Makanan>):RecyclerView.Adapter<AdapterPesan.MyViewHolder>(){
 
 
 
     @SuppressLint("ResourceType")
     override fun onCreateViewHolder(viewGroup: ViewGroup, position: Int): MyViewHolder {
-        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.fragment_menuminum, viewGroup, false)
+        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.activity_pesan, viewGroup, false)
         return MyViewHolder(view)
 
     }
 
+    //
     override fun getItemCount()= makanadapter.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
@@ -37,7 +39,7 @@ class AdapterMakanan(private val makanadapter: ArrayList<Makanan>):RecyclerView.
 
 
     //class  yang harus dibuat ketika membuat extend
-    inner class MyViewHolder(val item:View):RecyclerView.ViewHolder(item) {
+    inner class MyViewHolder(val item: View): RecyclerView.ViewHolder(item) {
 
         var tvName: TextView = item.findViewById(R.id.textJudul)
         var tvDetail: TextView = item.findViewById(R.id.tvharga)
