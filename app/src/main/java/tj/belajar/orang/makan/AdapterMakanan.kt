@@ -23,7 +23,6 @@ class AdapterMakanan(private val makanadapter: ArrayList<Makanan>):RecyclerView.
         return MyViewHolder(view)
 
 
-
     }
 
     override fun getItemCount()= makanadapter.size
