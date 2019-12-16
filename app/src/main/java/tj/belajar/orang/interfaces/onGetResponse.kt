@@ -2,7 +2,7 @@ package tj.belajar.orang.interfaces
 
 import tj.belajar.orang.model.makan.Makanan
 
-interface onGetAllDataMakanan {
+interface onGetResponse {
     fun onError(message : String)
-    fun onGetData(listMakanan : ArrayList<Makanan>)
+    fun onGetData(body : String)
 }

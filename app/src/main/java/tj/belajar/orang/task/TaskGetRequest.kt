@@ -5,19 +5,18 @@ import android.util.Log
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.Response
-import tj.belajar.orang.interfaces.onGetAllDataMakanan
+import tj.belajar.orang.interfaces.onGetResponse
 import tj.belajar.orang.model.makan.AllMakanan
 
-class TaskGetAllMakananAsc :AsyncTask<Void,Void,String> {
+class TaskGetRequest :AsyncTask<Void,Void,String> {
 
     lateinit var Url : String
-    lateinit var onGetAllDataMakanan : onGetAllDataMakanan
+    lateinit var onGetResponse : onGetResponse
     var error = ""
 
-    constructor(Url: String, onGetAllDataMakanan: onGetAllDataMakanan) {
+    constructor(Url: String, onGetResponse: onGetResponse) {
         this.Url = Url
-        this.onGetAllDataMakanan = onGetAllDataMakanan
+        this.onGetResponse = onGetResponse
     }
 
     override fun onPreExecute() {
@@ -47,21 +46,10 @@ class TaskGetAllMakananAsc :AsyncTask<Void,Void,String> {
 
     override fun onPostExecute(body: String) {
         super.onPostExecute(body)
-        try {
-
-            Log.e("response",body)
-            val data = Gson().fromJson<AllMakanan>(body, AllMakanan::class.java)
-            if (data.error != ""){
-                onGetAllDataMakanan.onError(data.error)
-                return
-            }
-            onGetAllDataMakanan.onGetData(data.data)
-
-        } catch (e: Exception) {
-            e.printStackTrace()
-            error += e.message!!
-            Log.e("response_error",error)
-            onGetAllDataMakanan.onError(error)
+        if (error != ""){
+            onGetResponse.onError(error)
+            return
         }
+        onGetResponse.onGetData(body)
     }
 }

@@ -7,15 +7,15 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_menu_makan.*
 import tj.belajar.orang.R
 import tj.belajar.orang.adapter.AdapterMakanan
-import tj.belajar.orang.interfaces.onGetAllDataMakanan
+import tj.belajar.orang.interfaces.onGetResponse
 import tj.belajar.orang.model.StaticVariabel
+import tj.belajar.orang.model.makan.AllMakanan
 import tj.belajar.orang.model.makan.Makanan
-import tj.belajar.orang.model.makan.dataMakanan
-import tj.belajar.orang.task.TaskGetAllMakanan
-import tj.belajar.orang.task.TaskGetAllMakananAsc
+import tj.belajar.orang.task.TaskGetRequest
 
 class MenuMakanan: AppCompatActivity() {
 
@@ -42,14 +42,20 @@ class MenuMakanan: AppCompatActivity() {
 
         showRecyleView()
 
-        TaskGetAllMakananAsc("${StaticVariabel.baseURL}api/all_makanan.php",object : onGetAllDataMakanan {
+        TaskGetRequest("${StaticVariabel.baseURL}api/all_makanan.php",object : onGetResponse {
             override fun onError(message: String) {
                 Toast.makeText(context,message,Toast.LENGTH_SHORT).show()
             }
-            override fun onGetData(dataAll: ArrayList<Makanan>) {
-                list.clear()
-                list.addAll(dataAll)
-                listMakanan.notifyDataSetChanged()
+            override fun onGetData(body : String) {
+                try {
+                    val data = Gson().fromJson<AllMakanan>(body, AllMakanan::class.java)
+                    list.clear()
+                    list.addAll(data.data)
+                    listMakanan.notifyDataSetChanged()
+
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
             }
         }).execute()
     }
